@@ -8,7 +8,8 @@ from flask_migrate import Migrate
 # App Config.
 #----------------------------------------------------------------------------#
 
-database_path ='postgresql://postgres:password@localhost:5432/capestone'
+#database_path ='postgresql://postgres:password@localhost:5432/heroku_test2'
+database_path ='postgres://qlfkgvonuvefbf:ae2b27298cfd7b5132e45794b2c5701bdcba85d50e3225fcd2de98f899daaf09@ec2-35-172-85-250.compute-1.amazonaws.com:5432/d4qlj16su5ipd4'
 db = SQLAlchemy()
 
 def setup_db(app, database_path=database_path):
