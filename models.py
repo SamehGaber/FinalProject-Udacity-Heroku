@@ -1,5 +1,5 @@
 #import app.py from .
-#import os
+import os
 from sqlalchemy import Column, String, Integer, create_engine
 from flask_sqlalchemy import SQLAlchemy
 #import json
@@ -9,7 +9,7 @@ from flask_migrate import Migrate
 #----------------------------------------------------------------------------#
 
 #database_path ='postgresql://postgres:password@localhost:5432/heroku_test2'
-database_path ='postgres://qlfkgvonuvefbf:ae2b27298cfd7b5132e45794b2c5701bdcba85d50e3225fcd2de98f899daaf09@ec2-35-172-85-250.compute-1.amazonaws.com:5432/d4qlj16su5ipd4'
+database_path =os.environ.get('DATABASE_URL')
 db = SQLAlchemy()
 
 def setup_db(app, database_path=database_path):
